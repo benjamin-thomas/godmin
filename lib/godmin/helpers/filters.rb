@@ -102,7 +102,7 @@ module Godmin
             include_hidden: true,
             include_blank: true
           }, {
-            data: { behavior: "select-box" }
+            data: { behavior: "select-box", remote: options[:remote] }
           }.deep_merge(html_options)
         )
       end

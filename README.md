@@ -227,6 +227,12 @@ When specifying a collection of ActiveRecords, two additional parameters, `optio
 filter :category, as: :select, collection: -> { Category.all }, option_text: "title"
 ```
 
+Ajax filters
+
+```ruby
+filter :title, remote: true, url: '/api/resource?q='
+```
+
 ### Batch actions
 
 Batch actions can be created as follows:
