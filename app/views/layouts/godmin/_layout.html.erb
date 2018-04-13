@@ -1,7 +1,13 @@
 <!doctype html>
 <html>
   <head>
-    <title><%= t("godmin.title") %></title>
+    <title>
+      <% if @title %>
+        <%= @title %> | <%= t("godmin.title") %>
+      <% else %>
+        <%= t("godmin.title") %>
+      <% end %>
+    </title>
     <%= stylesheet_link_tag File.join(engine_wrapper.namespaced_path, "application").gsub(/^\//, ""), media: "all" %>
     <%= javascript_include_tag File.join(engine_wrapper.namespaced_path, "application").gsub(/^\//, "") %>
     <%= csrf_meta_tags %>
